@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Famous Place Finder</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f0f0f0;
+        }
+        #container {
+            text-align: center;
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        input {
+            padding: 10px;
+            font-size: 16px;
+            margin-top: 10px;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            margin-top: 10px;
+            cursor: pointer;
+        }
+        #output {
+            margin-top: 20px;
+            font-size: 18px;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <h1>Find a Famous Place</h1>
+        <input type="text" id="cityInput" placeholder="Enter a city name">
+        <button onclick="findFamousPlace()">Submit</button>
+        <div id="output"></div>
+    </div>
+
+    <script>
+        function findFamousPlace() {
+            const city = document.getElementById('cityInput').value.trim().toLowerCase();
+            const output = document.getElementById('output');
+
+            const places = {
+                'new york': 'Statue of Liberty',
+                'paris': 'Eiffel Tower',
+                'london': 'Big Ben',
+                'rome': 'Colosseum',
+                'tokyo': 'Tokyo Tower',
+                'sydney': 'Sydney Opera House',
+                'cairo': 'Great Pyramid of Giza',
+                'beijing': 'Great Wall of China'
+               
+
+                
+            };
+
+            if (places[city]) {
+                output.textContent = `A famous place in ${city.charAt(0).toUpperCase() + city.slice(1)} is ${places[city]}.`;
+            } else {
+                output.textContent = 'Sorry, I do not have information about that city.';
+            }
+        }
+    </script>
+</body>
+</html>

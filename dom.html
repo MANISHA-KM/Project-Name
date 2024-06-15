@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang = "en">
+    <head>
+        <meta charset = UTF-8>
+        <meta name = "viewpoint" content = "width = device - width,initial-scale=1.0">
+        <tittle>document</tittle>
+    </head>
+    <body>
+        <h1 id="a"></h1>
+        <script>
+         console.log(document.getElementById("a"))
+        </script>
+    </body>
+</html>  
+<body>
+    <p id="a"></p>
+
+    <script>
+        let h=document.getElementById("a")
+        h.innerHTML="<h1><i>PES COLLEGE</b></i></h1>"
+    </script>
+</body>
+<body>
+    <p id="a"></p>
+
+    <script>
+        let m=document.getElementById("a")
+        m.innerText="Hello World"
+        m.textContent="<h1>by by</h1>"
+       m.innerHTML "<h1><i>PES College</i></h1>"
+    </script>
+</body>
+<!--using style-->
+<body>
+    <p id="a"></p>
+
+    <script>
+        let x=document.getElementById("a") 
+        x.innerText="Hello World"
+        x.textContent="<h1>by by</h1>"
+       x.innerHTML="<h1><i>PES College</i></h1>"
+       x.style.color="red"
+       x.style.backgroundColor="black"
+
+       x.style.cssText="color:green; background-color:black; font-style:italic"
+    </script>
+</body>
